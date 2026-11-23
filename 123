@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>誰是 Max Verstappen？F1 四冠王入門教學簡報</title>
+  <style>
+    :root {
+      --bg-dark: #0b132b;
+      --bg-card: #16213e;
+      --rb-red: #e10600;
+      --rb-yellow: #ffd100;
+      --text-main: #f8f9fa;
+      --text-muted: #adb5bd;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Noto Sans TC", "Segoe UI", sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-main);
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      padding: 16px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid var(--rb-red);
+      background: rgba(11, 19, 43, 0.95);
+    }
+    .badge {
+      background: var(--rb-red);
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    .source-tag {
+      font-size: 0.85rem;
+      color: var(--rb-yellow);
+    }
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .slide {
+      display: none;
+      width: 100%;
+      max-width: 960px;
+      background: var(--bg-card);
+      border-left: 6px solid var(--rb-red);
+      border-radius: 12px;
+      padding: 48px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+      animation: fadeIn 0.35s ease;
+    }
+    .slide.active { display: block; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h1 { font-size: 2.6rem; margin-bottom: 16px; line-height: 1.3; }
+    h2 { font-size: 2rem; color: var(--rb-yellow); margin-bottom: 24px; }
+    p { font-size: 1.2rem; line-height: 1.8; color: #e9ecef; margin-bottom: 16px; }
+    ul { list-style: none; margin-top: 12px; }
+    li {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      margin-bottom: 14px;
+      padding-left: 24px;
+      position: relative;
+    }
+    li::before {
+      content: "▸";
+      color: var(--rb-red);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 20px;
+    }
+    .info-box {
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      border-radius: 8px;
+      border-top: 3px solid var(--rb-yellow);
+    }
+    .info-box h3 { color: var(--rb-yellow); margin-bottom: 10px; font-size: 1.25rem; }
+    .wiki-ref {
+      margin-top: 28px;
+      padding-top: 12px;
+      border-top: 1px dashed rgba(255,255,255,0.2);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    footer {
+      padding: 16px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0,0,0,0.3);
+    }
+    .controls button {
+      background: var(--rb-red);
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      margin-left: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    .controls button:disabled {
+      background: #495057;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div><span class="badge">LLM WIKI 教學簡報</span></div>
+    <div class="source-tag">知識庫來源：Max Verstappen F1 Wiki</div>
+  </header>
+
+  <main>
+    <!-- Slide 1 -->
+    <section class="slide active">
+      <p style="color: var(--rb-yellow); font-weight: bold;">給 F1 零基礎觀眾的快速導覽</p>
+      <h1>誰是 Max Verstappen？<br>認識當代 F1 賽道統治者</h1>
+      <p>即使你從未看過一級方程式賽車（Formula 1），這份簡報將帶你用 5 分鐘理解這位荷蘭車手為何能改寫現代賽車歷史。</p>
+      <div class="wiki-ref">資料索引：index.md → wiki/biography.md</div>
+    </section>
+
+    <!-- Slide 2 -->
+    <section class="slide">
+      <h2>1. 什麼是 F1？為什麼車手這麼重要？</h2>
+      <p>F1（一級方程式）是全球最高等級的場地賽車運動，每支車隊派出 2 位車手，在全年約 24 站大獎賽中爭奪積分。</p>
+      <div class="grid-2">
+        <div class="info-box">
+          <h3>車手世界冠軍 (WDC)</h3>
+          <p>全年個人累積積分最高者獲得，代表該年度最強車手。</p>
+        </div>
+        <div class="info-box">
+          <h3>車隊世界冠軍 (WCC)</h3>
+          <p>兩位車手積分加總最高之車隊獲得，決定車隊研發獎金分配。</p>
+        </div>
+      </div>
+      <div class="wiki-ref">資料索引：wiki/f1-basics.md</div>
+    </section>
+
+    <!-- Slide 3 -->
+    <section class="slide">
+      <h2>2. Max Verstappen 基本檔案與成名之路</h2>
+      <ul>
+        <li><strong>出身背景：</strong>1997 年生於比利時，代表荷蘭出賽；父親 Jos Verstappen 亦為前 F1 車手。</li>
+        <li><strong>史上最年輕紀錄：</strong>2015 年以 17 歲之齡代表紅牛二隊（Toro Rosso）出賽，成為 F1 史上最年輕正賽車手。</li>
+        <li><strong>晉升紅牛一隊：</strong>2016 年西班牙站首度代表 Red Bull Racing 出賽即奪冠，寫下史上最年輕分站冠軍紀錄（18 歲）。</li>
+      </ul>
+      <div class="wiki-ref">資料索引：wiki/biography.md, wiki/career-timeline.md</div>
+    </section>
+
+    <!-- Slide 4 -->
+    <section class="slide">
+      <h2>3. 榮譽與統治級數據（2021–2024）</h2>
+      <ul>
+        <li><strong>四屆世界冠軍：</strong>2021、2022、2023、2024 連續四年奪得 F1 車手世界冠軍。</li>
+        <li><strong>單季 19 勝神話：</strong>2023 年賽季在 22 場比賽中贏下 19 場，勝率高達 86.3%，創下 F1 歷史新高。</li>
+        <li><strong>駕駛風格：</strong>以極限晚煞車、雨戰統治力與精準輪胎管理聞名，被譽為「人車合一」的現代代表。</li>
+      </ul>
+      <div class="wiki-ref">資料索引：wiki/honors-records.md</div>
+    </section>
+
+    <!-- Slide 5 -->
+    <section class="slide">
+      <h2>4. 紅牛體系與歷任隊友演變</h2>
+      <p>在 F1 中，隊友是唯一駕駛「完全相同賽車」的對手，也是衡量車手實力的最佳基準：</p>
+      <ul>
+        <li><strong>早期搭檔（2016–2018）：</strong>Daniel Ricciardo，兩人在競爭中激發出 Verstappen 的排位賽速度。</li>
+        <li><strong>中生代過渡（2019–2020）：</strong>Pierre Gasly 與 Alexander Albon，凸顯紅牛賽車極度敏感的前端轉向特性。</li>
+        <li><strong>四冠王時期（2021–2024）：</strong>Sergio Pérez 協助團隊奪下雙料冠軍；後續進入新一代隊友輪替階段。</li>
+      </ul>
+      <div class="wiki-ref">資料索引：wiki/teammates.md</div>
+    </section>
+
+    <!-- Slide 6 -->
+    <section class="slide">
+      <h2>總結：理解 Verstappen 的三個關鍵字</h2>
+      <div class="grid-2">
+        <div class="info-box">
+          <h3>早熟與紀錄粉碎機</h3>
+          <p>從 17 歲出道到四連霸，幾乎包辦所有「最年輕」與「單季最高勝率」紀錄。</p>
+        </div>
+        <div class="info-box">
+          <h3>紅牛體系核心</h3>
+          <p>與 Red Bull Racing 深度綁定，透過高難度調校發揮賽車極限速度。</p>
+        </div>
+      </div>
+      <p style="margin-top: 24px; color: var(--rb-yellow);">提示：使用鍵盤左右方向鍵（← / →）或下方按鈕可切換頁面。</p>
+      <div class="wiki-ref">資料索引：index.md（全站知識庫彙整）</div>
+    </section>
+  </main>
+
+  <footer>
+    <div id="page-indicator">第 1 / 6 頁</div>
+    <div class="controls">
+      <button id="prev-btn" onclick="changeSlide(-1)" disabled>上一頁</button>
+      <button id="next-btn" onclick="changeSlide(1)">下一頁</button>
+    </div>
+  </footer>
+
+  <script>
+    let current = 0;
+    const slides = document.querySelectorAll('.slide');
+    const indicator = document.getElementById('page-indicator');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+
+    function updateUI() {
+      slides.forEach((s, i) => s.classList.toggle('active', i === current));
+      indicator.textContent = `第 ${current + 1} / ${slides.length} 頁`;
+      prevBtn.disabled = current === 0;
+      nextBtn.disabled = current === slides.length - 1;
+    }
+
+    function changeSlide(step) {
+      const next = current + step;
+      if (next >= 0 && next < slides.length) {
+        current = next;
+        updateUI();
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') changeSlide(1);
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+    });
+  </script>
+</body>
+</html>
